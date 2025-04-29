@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render
 from .models import Employee
 from django.shortcuts import render, get_object_or_404
