@@ -2,17 +2,26 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'dochazka/style.css' %}" />
     <title>Dochazka</title>
-</head>
-<body>
-    <nav>>
-        <ul>
-            <li>Attendance</a></li>
-            <li>Employee</></li>
-        </ul> 
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">LOGO</a>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="{% url 'index' %}">Attendance</a>
+        </li>
+        <li>
+          <a href="{% url 'employee' %}">Employee</a>
+        </li>
+      </ul>
     </nav>
-</body>
+    <div class="content"></div>
+  </body>
 </html>

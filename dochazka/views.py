@@ -12,7 +12,7 @@ from django.contrib.auth.forms import *
 
 def index(request):
     employees = Employee.objects.all()
-    return render(request, 'dochazka/index.html', {'employees': employees})
+    return render(request, 'dochazka/layout.html', {'employees': employees})
 
 def record_attendance(request):
     message = ""
