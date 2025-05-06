@@ -37,10 +37,10 @@ def record_attendance(request):
 
     return render(request, 'dochazka/attendance.html', {'form': form, 'message': message})
 
-def employee(request):
-    if not request.employee.is_authenticated:
-        return HttpResponseRedirect(reverse("login"))
-    return render(request, "dochazka/employee.html")
+# def employee(request):
+#     if not request.employee.is_authenticated:
+#         return HttpResponseRedirect(reverse("login"))
+#     return render(request, "dochazka/employee.html")
 
 def login_view(request):
     if request.method == "POST":
