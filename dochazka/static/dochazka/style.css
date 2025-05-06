@@ -10,16 +10,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #1A2226; /* Stejné pozadí jako login box */
     padding: 15px 20px;
-    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Přidán stín */
 }
 
 .navbar .logo a {
     text-decoration: none;
-    color: white;
-    font-size: 1.5em;
+    color: #ECF0F5; /* Světlý text */
+    font-size: 1.8em;
     font-weight: bold;
+    letter-spacing: 1px; /* Přidáno mezery mezi písmeny */
 }
 
 .navbar .nav-links {
@@ -34,16 +35,17 @@ body {
 }
 
 .navbar .nav-links a {
-    display: inline-block;
-    font-family: "Cal Sans", sans-serif;
     text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-    transition: 0.3s;
+    color: #ECF0F5; /* Světlý text */
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px; /* Přidáno mezery mezi písmeny */
+    transition: color 0.3s, transform 0.3s; /* Plynulý přechod */
 }
 
 .navbar .nav-links a:hover {
-    transform: scale(1.1);
+    color: #0DB8DE; /* Modrá barva při hoveru */
+    transform: scale(1.1); /* Zvětšení při hoveru */
 }
 
 .content {
