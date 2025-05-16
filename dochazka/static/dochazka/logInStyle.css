@@ -5,7 +5,8 @@ body {
 }
 
 .login-box {
-    margin-top: 75px;
+    margin: 75px 30px 0px;
+    
     height: auto;
     background: #1A2226;
     text-align: center;
