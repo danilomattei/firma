@@ -11,7 +11,7 @@ from . formular import *
 from django.contrib.auth.forms import *
 
 def index(request):
-    return render(request, 'dochazka/login.html')
+    return render(request, 'dochazka/layout.html')
 
 def record_attendance(request):
     message = ""
