@@ -9,3 +9,6 @@ pip install django
 
 Spuštění lokálního serveru:
 r
+
+username: Danilo
+heslo: Danilo
