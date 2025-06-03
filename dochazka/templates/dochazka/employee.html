@@ -2,12 +2,12 @@
 
 {% block body %}
 
-    <h1>Welcome, {{ employee.get_full_name }}</h1>
-
-    <ul>
-        <li>Username: {{ employee.username }}</li>
-        <li>Email: {{ employee.email }}</li>
-    </ul>
-
-    <a href="{% url 'logout' %}">Log Out</a>
+    <div id="user-details">
+        <h1>Welcome, {{ employee.get_full_name }}</h1>
+        <ul>
+            <li class="user-details-employee">Username: {{ employee.username }}</li>
+            <li class="user-details-employee">Email: {{ employee.email }}</li>
+        </ul>
+        <a href="{% url 'logout' %}">Log Out</a>
+    </div>
 {% endblock %}
