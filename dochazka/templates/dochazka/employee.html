@@ -1,13 +1,14 @@
 {% extends "dochazka/layout.html" %}
 
 {% block body %}
-
-    <div id="user-details">
-        <h1>Welcome, {{ employee.get_full_name }}</h1>
-        <ul>
-            <li class="user-details-employee">Username: {{ employee.username }}</li>
-            <li class="user-details-employee">Email: {{ employee.email }}</li>
-        </ul>
-        <a href="{% url 'logout' %}">Log Out</a>
+    <div class="user-details-container">
+        <div class="user-details-box">
+            <h1 class="user-details-title">Welcome, {{ employee.get_full_name }}</h1>
+            <ul class="user-details-list">
+                <li><strong>Username:</strong> {{ employee.username }}</li>
+                <li><strong>Email:</strong> {{ employee.email }}</li>
+            </ul>
+            <a href="{% url 'logout' %}" class="btn btn-outline-primary user-details-logout">Log Out</a>
+        </div>
     </div>
 {% endblock %}

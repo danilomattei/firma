@@ -1,7 +1,45 @@
-.user-details-employee {
+/* User details centering and styling */
+.user-details-container {
+    min-height: 70vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    color: rgb(255, 255, 255);
+    background: #222D32;
+}
+
+.user-details-box {
+    background: #1A2226;
+    padding: 40px 32px;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+    color: #ECF0F5;
+    min-width: 320px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.user-details-title {
+    font-size: 2em;
+    margin-bottom: 24px;
+    color: #0DB8DE;
+    letter-spacing: 1px;
+}
+
+.user-details-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 28px;
+    font-size: 1.1em;
+}
+
+.user-details-list li {
+    margin-bottom: 10px;
+}
+
+.user-details-logout {
+    margin-top: 10px;
+    font-size: 1em;
+    padding: 8px 24px;
+    border-radius: 6px;
 }
