@@ -39,7 +39,10 @@ def record_attendance(request):
 def employee(request):
      if not request.user.is_authenticated:
          return HttpResponseRedirect(reverse("login"))
-     return render(request, "dochazka/employee.html")
+     context = {
+         "employee": request.user
+     }
+     return render(request, "dochazka/employee.html", context)
 
 def login_view(request):
     if request.method == "POST":
@@ -48,7 +51,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse("user"))
+            return HttpResponseRedirect(reverse("employee"))
         else:
             return render(request, "dochazka/login.html", {
                 "message": "Invalid credentials."

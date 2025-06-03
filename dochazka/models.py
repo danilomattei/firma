@@ -13,7 +13,6 @@ class CustomUserManager(UserManager):
         if not username:
             raise ValueError("Nebylo zadane uzivatelske jmeno!")
 
-        email = self.normalize_email(email)
         user = self.model(username=username, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
@@ -35,7 +34,6 @@ class Employee(AbstractBaseUser, PermissionsMixin):
     surname = models.CharField(max_length=32)
     username = models.CharField(max_length=64, default='', unique=True)
     email = models.EmailField(blank=True, default='')
-    password = models.CharField(max_length=7)
     department = models.ForeignKey('Department', related_name="employees", on_delete=models.CASCADE, null=True, blank=True)
     position = models.CharField(max_length=32)
 
@@ -54,10 +52,10 @@ class Employee(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = 'Employees'
 
     def get_full_name(self):
-        return self.name
+        return f"{self.name} {self.surname}"
     
     def get_short_name(self):
-        return self.name or self.email.split('@')[0]
+        return self.name
 
 class Attendance(models.Model):
     employee = models.ForeignKey('Employee', related_name="attendance_records", on_delete=models.CASCADE)
