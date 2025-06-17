@@ -11,6 +11,12 @@ from django.contrib.auth.forms import *
 def index(request):
     return render(request, 'dochazka/layout.html')
 
+def attendance(request):
+    attendance = Attendance.objects.all()
+    context = {'attendance': attendance}
+
+    return render(request, 'dochazka/attendance.html', context)
+
 def record_attendance(request):
     message = ""
     if request.method == "POST":

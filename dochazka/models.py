@@ -64,4 +64,4 @@ class Attendance(models.Model):
     check_out = models.TimeField(null=True, blank=True) 
 
     def __str__(self):
-        return f"{self.employee.name} {self.employee.surname} - {self.date}"
+        return f"{self.employee.name} {self.employee.surname} - {self.date} {self.check_in} - {self.check_out}"

@@ -1,0 +1,9 @@
+{% extends "dochazka/layout.html" %}
+
+{% block body %}
+    <ul>
+    {% for zaznam in attendance %}
+        <li>{{ zaznam }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
