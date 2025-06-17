@@ -70,14 +70,13 @@ body {
     transition: 0.3s;
 }
 
-form {
+.signup-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #1A2226; /* Stejné pozadí jako navbar */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Přidán stín */
     color: white;
 }
 
