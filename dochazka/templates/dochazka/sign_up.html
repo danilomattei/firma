@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<h3>Registrace uživatele</h3>
+<h3 class="login-title">Registrace uživatele</h3>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
