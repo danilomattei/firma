@@ -7,4 +7,4 @@ class RegistrationForm(UserCreationForm):
 
     class Meta:
         model = Employee
-        fields = ["username", "email", "password" ]
+        fields = ["username", "email", ]
